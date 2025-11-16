@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مستقبلنا الذكي</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #fafafa;
+      color: #222;
+    }
+
+    header {
+      background-color: #ce1126; /* أحمر العلم المصري */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 40px;
+      margin-left: 10px;
+      border: 2px solid white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #fff, #eee);
+    }
+
+    .hero h1 {
+      color: #ce1126;
+      font-size: 2.2em;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .hero button {
+      background-color: #ffd700; /* ذهبي */
+      color: #222;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .hero button:hover {
+      background-color: #f0c000;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      height: 80px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px 0;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background-color: #ffd700;
+      color: #222;
+      border: none;
+      padding: 10px 20px;
+      font-size: 0.95em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #f0c000;
+    }
+
+    .footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      position: relative;
+    }
+
+    .footer img {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      height: 25px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+      }
+
+      .hero {
+        padding: 40px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+      <h2>مستقبلنا الذكي</h2>
+    </div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">البيئة</a>
+      <a href="#">التكنولوجيا</a>
+      <a href="#">صحتنا</a>
+      <a href="تراث.html">تراثنا</a>
+      <a href="#">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>مرحبًا بك في "مستقبلنا الذكي" 🇪🇬</h1>
+    <p>نتعلم، نحمي، ونبني مصر الغد — معًا نصنع جيلاً أذكى وأكثر وعيًا.</p>
+    <button>ابدأ الآن</button>
+  </section>
+
+  <section class="sections">
+    <div class="card">
+      <img src="landscape.gif" alt="البيئة">
+      <h3>البيئة النظيفة</h3>
+      <p>تعلم كيف تحافظ على الماء والطاقة وتقلل من التلوث.</p>
+      <button onclick="window.location.href='#'">ابدأ الآن</button>
+    </div>
+
+    <div class="card">
+      <img src="AI.gif" alt="التكنولوجيا">
+      <h3>التكنولوجيا والذكاء الاصطناعي</h3>
+      <p>اكتشف عالم الذكاء الاصطناعي وتعلم كيف تستخدمه بأمان.</p>
+      <button onclick="window.location.href='#'">ابدأ الآن</button>
+    </div>
+
+    <div class="card">
+      <img src="home-care.gif" alt="الصحة">
+      <h3>صحتك وحياتك</h3>
+      <p>نصائح لتنظيم الوقت والغذاء والنوم بطريقة سليمة.</p>
+      <button onclick="window.location.href='#'">ابدأ الآن</button>
+    </div>
+
+    <div class="card">
+      <img src="pyramid.gif" alt="التراث الفرعوني">
+      <h3>تراثنا المصري</h3>
+      <p>تعرف على حضارتنا الفرعونية العريقة وقصص أجدادنا بطريقة ممتعة.</p>
+      <button onclick="window.location.href='تراث.html'">ابدأ الآن</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+    <p>© 2025 - موقع مستقبلنا الذكي. فخورون بانتمائنا لمصر 🇪🇬</p>
+  </footer>
+</body>
+</html>

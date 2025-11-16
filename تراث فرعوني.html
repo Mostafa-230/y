@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التراث الفرعوني - مستقبلنا الذكي</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f4e8;
+      color: #3e2f1c;
+      overflow-x: hidden;
+    }
+
+
+    header {
+      background-color: #b68d40;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 40px;
+      margin-left: 10px;
+      border: 2px solid white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== قسم المقدمة ===== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Egyptian_pyramids_of_Giza.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 650px;
+      margin: 15px auto;
+    }
+
+    /* ===== قسم الإنجازات الحضارية ===== */
+    .achievements {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .achievements h2 {
+      color: #b68d40;
+      margin-bottom: 25px;
+      font-size: 1.9em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #faf4de;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #b68d40;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #4b3820;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background-color: #b68d40;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      font-size: 0.9em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #9a772f;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ===== قسم المعالم الأثرية ===== */
+    .monuments {
+      padding: 50px 20px;
+      background-color: #f0e6c8;
+      text-align: center;
+    }
+
+    .monuments h2 {
+      color: #8b6b2e;
+      font-size: 1.9em;
+      margin-bottom: 20px;
+    }
+
+    .monument-card {
+      background: #fff;
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .monument-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .monument-content {
+      padding: 20px;
+    }
+
+    .monument-content h3 {
+      color: #b68d40;
+      margin-bottom: 10px;
+    }
+
+    .monument-content p {
+      color: #4b3820;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .monument-content button {
+      background-color: #b68d40;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      font-size: 0.9em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .monument-content button:hover {
+      background-color: #9a772f;
+    }
+
+    /* ===== قسم هل تعلم ===== */
+    .facts {
+      background-color: #fff7d6;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .facts h2 {
+      color: #b68d40;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .fact-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .fact {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      font-size: 0.95em;
+      color: #3e2f1c;
+      transition: transform 0.3s;
+    }
+
+    .fact:hover {
+      transform: scale(1.03);
+      background-color: #f9f0c7;
+    }
+
+    /* ===== قسم تعلم من تراثك ===== */
+    .learn {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #efe3c0;
+    }
+
+    .learn h2 {
+      color: #6d4b1f;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .learn p {
+      color: #4b3820;
+      font-size: 1em;
+      max-width: 600px;
+      margin: 10px auto 20px;
+    }
+
+    .learn button {
+      background-color: #b68d40;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .learn button:hover {
+      background-color: #9a772f;
+    }
+
+    /* ===== الفوتر ===== */
+    footer {
+      background-color: #3e2f1c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      position: relative;
+    }
+
+    footer img {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      height: 25px;
+    }
+
+    /* ===== توافق الجوال ===== */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8em; }
+      .hero p { font-size: 1em; }
+      .cards, .fact-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+      <h2>مستقبلنا الذكي</h2>
+    </div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="#">البيئة</a>
+      <a href="#">التكنولوجيا</a>
+      <a href="#">صحتنا</a>
+      <a href="تراث.html">تراثنا</a>
+    </nav>
+  </header>
+
+  <!-- قسم المقدمة -->
+  <section class="hero">
+    <h1>التراث الفرعوني.. حضارة خالدة عبر الزمن</h1>
+    <p>مصر القديمة ليست مجرد تاريخ، بل مدرسة إنسانية جمعت بين العلم والإيمان والفن، فأنارت للعالم طريق الحضارة.</p>
+  </section>
+
+  <!-- قسم الإنجازات الحضارية -->
+  <section class="achievements">
+    <h2>الإنجازات الحضارية</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="عمارة.webp" alt="العمارة والفنون">
+        <h3>العمارة والفنون</h3>
+        <p>أبدع المصريون في بناء المعابد والأهرامات والنقوش التي ما زالت تبهر العالم بدقتها وجمالها.</p>
+        <button onclick="location.href='عمارة.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="طب.webp" alt="العلم والطب">
+        <h3>العلم والطب</h3>
+        <p>برعوا في الطب والتحنيط والرياضيات والفلك، واخترعوا الكتابة الهيروغليفية لتوثيق علومهم.</p>
+        <button onclick="location.href='علوم.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="مراة.webp" alt="المجتمع والمرأة">
+        <h3>المجتمع والمرأة</h3>
+        <p>احترموا المرأة وشاركَت في الحكم والعمل والتعليم، وكان للأسرة مكانة مقدسة في المجتمع.</p>
+        <button onclick="location.href='مراة.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="الدين.webp" alt="الحياة الدينية">
+        <h3>الحياة الدينية</h3>
+        <p>آمنوا بالبعث والخلود، فبنوا المعابد والمقابر لعبادة آلهتهم وتكريم الموتى في رحلتهم الأبدية.</p>
+        <button onclick="location.href='دين.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="زراعة.webp" alt="الزراعة والاقتصاد">
+        <h3>الزراعة والاقتصاد</h3>
+        <p>اعتمدوا على نهر النيل في الزراعة، ونظّموا الري والتجارة، فازدهر اقتصادهم على مر العصور.</p>
+        <button onclick="location.href='زراعة.html'">المزيد</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم المعالم الأثرية -->
+  <section class="monuments">
+    <h2>أهم المعالم الأثرية</h2>
+
+    <div class="monument-card">
+      <img src="متحف.webp" alt="المتحف المصري الكبير">
+      <div class="monument-content">
+        <h3>المتحف المصري الكبير</h3>
+        <p>يقع بجوار أهرامات الجيزة، وهو أكبر متحف أثري في العالم يعرض آلاف القطع الأثرية بتقنيات عرض حديثة.</p>
+        <button onclick="location.href='المتحف المصري.html'">المزيد</button>
+      </div>
+    </div>
+
+    <div class="monument-card">
+      <img src="خوفو.webp" alt="هرم خوفو">
+      <div class="monument-content">
+        <h3>هرم خوفو</h3>
+        <p>أعجوبة العالم القديم التي ما زالت قائمة حتى اليوم، رمز العبقرية الهندسية والدقة المعمارية الفريدة.</p>
+        <button onclick="location.href='khufu.html'">المزيد</button>
+      </div>
+    </div>
+
+    <div class="monument-card">
+      <img src="ابو الهول.webp" alt="أبو الهول">
+      <div class="monument-content">
+        <h3>أبو الهول</h3>
+        <p>تمثال ضخم يجمع بين جسم أسد ورأس إنسان، يرمز إلى القوة والحكمة والحماية.</p>
+        <button onclick="location.href='sphinx.html'">المزيد</button>
+      </div>
+    </div>
+
+    <div class="monument-card">
+      <img src="الكرنك.webp" alt="معبد الكرنك">
+      <div class="monument-content">
+        <h3>معبد الكرنك</h3>
+        <p>أكبر مجمع ديني في العالم القديم، يجسد روعة الفن والعمارة المصرية القديمة.</p>
+        <button onclick="location.href='karnak.html'">المزيد</button>
+      </div>
+    </div>
+
+    <div class="monument-card">
+      <img src="توت.webp" alt="مقبرة توت عنخ آمون">
+      <div class="monument-content">
+        <h3>مقبرة توت عنخ آمون</h3>
+        <p>اكتشافها كشف أسرارًا عظيمة عن حياة الملوك والفن المصري القديم.</p>
+        <button onclick="location.href='tutankhamun.html'">المزيد</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم هل تعلم -->
+  <section class="facts">
+    <h2>هل تعلم؟</h2>
+    <div class="fact-list">
+      <div class="fact">هل تعلم أن المصريين القدماء هم أول من استخدموا الكتابة بالحبر الأسود والأحمر؟</div>
+      <div class="fact">هل تعلم أن الأهرامات كانت مغطاة بطبقة من الحجر الجيري الأبيض اللامع؟</div>
+      <div class="fact">هل تعلم أن الكهنة في مصر القديمة كانوا من أكثر الناس علمًا بالطب والفلك؟</div>
+      <div class="fact">هل تعلم أن كلمة "فرعون" تعني "البيت العظيم"؟</div>
+      <div class="fact">هل تعلم أن المصريين القدماء آمنوا بأن القلب هو مركز الذكاء والمشاعر؟</div>
+    </div>
+  </section>
+
+  <!-- قسم تعلم من تراثك -->
+  <section class="learn">
+    <h2>تعلم من تراثك</h2>
+    <p>استخدم الفراعنة العلم والإيمان لبناء حضارة خالدة، فلنتعلم نحن كيف نجعل التكنولوجيا وسيلة لحفظ مجد أجدادنا.</p>
+    <button onclick="location.href='تراث.html'">عودة إلى صفحة التراث</button>
+  </section>
+
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+    <p>© 2025 - موقع مستقبلنا الذكي. فخورون بجذورنا العريقة 🇪🇬</p>
+  </footer>
+
+</body>
+</html>

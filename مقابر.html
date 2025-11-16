@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المقابر المصرية القديمة - مستقبلنا الذكي</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f4e8;
+      color: #3e2f1c;
+      overflow-x: hidden;
+      line-height: 1.7em;
+    }
+
+    header {
+      background-color: #b68d40;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 40px;
+      margin-left: 10px;
+      border: 2px solid white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Valley_of_the_Kings.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 900px;
+      margin: 15px auto;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: justify;
+    }
+
+    .section h2 {
+      color: #b68d40;
+      margin-bottom: 20px;
+      font-size: 1.9em;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 500px; /* حجم أصغر */
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+    }
+
+    .facts {
+      background-color: #fff7d6;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .facts h2 {
+      color: #b68d40;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .fact-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .fact {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      font-size: 0.95em;
+      color: #3e2f1c;
+      transition: transform 0.3s;
+    }
+
+    .fact:hover {
+      transform: scale(1.03);
+      background-color: #f9f0c7;
+    }
+
+    footer {
+      background-color: #3e2f1c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      position: relative;
+    }
+
+    footer img {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      height: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8em; }
+      .hero p { font-size: 1em; }
+      .section img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+      <h2>مستقبلنا الذكي</h2>
+    </div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="تراث.html">تراثنا</a>
+      <a href="عمارة.html">العمارة والفنون</a>
+      <a href="مقابر.html">المقابر</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>المقابر المصرية القديمة</h1>
+    <p>المقابر المصرية القديمة تمثل رحلة الإنسان في الحياة وبعد الموت، من أقدم المصاطب البسيطة إلى أعظم الأهرامات والمقابر الملكية مثل مقبرة توت عنخ آمون. كانت المقابر جزءًا أساسيًا من العقيدة المصرية التي تؤمن بالبعث والحياة الأبدية.</p>
+  </section>
+
+  <!-- مقدمة -->
+  <section class="section">
+    <h2>مقدمة عن المقابر المصرية</h2>
+    <p>لقد بدأ المصريون القدماء بناء المقابر منذ عصور ما قبل الأسرات، بهدف تأمين حياة أبدية للمتوفى. كانت المقابر تُعتبر من أهم المنشآت بعد المعابد، لأنها تخدم الغرض الديني والروحي والاجتماعي. من خلال المقابر، يمكننا فهم الحياة اليومية، العقائد الدينية، والفن المصري القديم. كانت المقابر أيضًا رمزًا للسلطة والثروة، فكلما زاد نفوذ الشخص، زادت عظمة قبره.</p>
+  </section>
+
+  <!-- تطور المقابر -->
+  <section class="section" style="background-color:#f0e6c8;">
+    <h2>تطور المقابر عبر العصور</h2>
+    <p>بدأت المقابر المصرية بالمصاطب البسيطة، وهي عبارة عن منصات مرتفعة مصنوعة من الطوب اللبن فوق القبر. في عصر الأسرات المبكرة، ظهرت المقابر الصخرية والمقابر الملكية البسيطة. مع تطور الحضارة، أصبحت الأهرامات رمزًا للقوة والخلود، مثل هرم زوسر المدرج الذي يعد أول هرم حقيقي، وهرم خوفو الأكبر الذي يعتبر أعظم إنجاز هندسي في العالم القديم. في العصور المتأخرة، برزت مقابر وادي الملوك ووادي الملكات، حيث دفن الملوك والنبلاء في مقابر محفورة في الجبال مع دهاليز وغرف متعددة مزينة بالرسوم الجدارية.</p>
+    <img src="هرم زوسر.webp" alt="هرم زوسر المدرج">
+  </section>
+
+  <!-- أنواع المقابر -->
+  <section class="section">
+    <h2>أنواع المقابر</h2>
+    <p>تتنوع المقابر في مصر القديمة حسب الغرض والمكانة الاجتماعية:</p>
+    <ul>
+      <li><strong>المصاطب:</strong> وهي أولى أنواع المقابر الملكية البسيطة، عبارة عن منصات حجرية فوق القبر.</li>
+      <li><strong>الأهرامات:</strong> تمثل القمة في العمارة الجنائزية، أشهرها أهرامات الجيزة الثلاثة التي بنيت لعصر الدولة القديمة.</li>
+      <li><strong>مقابر وادي الملوك:</strong> مقابر محفورة في الجبال، استخدمتها الأسر الحاكمة في الدولة الحديثة، مع دهاليز وغرف مزينة بالنقوش والرسوم.</li>
+      <li><strong>مقابر النبلاء:</strong> مشابهة لمقابر الملوك ولكن أصغر، تحمل رسومات توضح حياة المتوفى ومهنته.</li>
+    </ul>
+    <img src="وادي الملوك.webp" alt="خريطة وادي الملوك">
+  </section>
+
+  <!-- طرق البناء والحفر -->
+  <section class="section" style="background-color:#f0e6c8;">
+    <h2>طرق حفر وبناء المقابر</h2>
+    <p>استخدم المصريون القدماء أدوات بسيطة مثل الأزاميل والمطارق، واستغلوا الصخور الطرية مثل الحجر الجيري والجرانيت. كانت عملية البناء تتطلب تخطيطًا دقيقًا لتجنب الانهيار. في حالة الأهرامات، تم نقل الحجارة الضخمة باستخدام الزلاقات على الرمال المبتلة لتقليل الاحتكاك. أما في وادي الملوك، فقد تم حفر دهاليز وغرف طويلة بدقة هندسية لضمان الأمن والحماية من السرقة.</p>
+    <img src="بناء هرم.webp" alt="نقل الحجارة في البناء القديم">
+  </section>
+
+  <!-- أبرز المقابر -->
+  <section class="section">
+    <h2>أبرز المقابر المصرية</h2>
+    <p><strong>1. مقبرة توت عنخ آمون:</strong> اكتشفها هوارد كارتر عام 1922، تحتوي على كنوز لا تُقدر بثمن، تمثل الفن والحياة اليومية للملك. تقع في وادي الملوك، الأسرة 18، وهي واحدة من أفضل المقابر المحفوظة.</p>
+    <img src="مقبرة توت.webp" alt="مقبرة توت عنخ آمون">
+   
+    <p><strong>2. هرم خوفو:</strong> أكبر هرم في الجيزة، يعتبر قمة الإنجاز الهندسي في الدولة القديمة، بني لتخليد الملك خوفو.</p>
+    <img src="خوفو.webp" alt="هرم خوفو">
+    <p><strong>3. هرم زوسر:</strong> أول هرم مدرج، يمثل الانتقال من المصطبة إلى الهرم الحقيقي.</p>
+    <img src="زوسر.webp" alt="هرم زوسر المدرج">
+    <p><strong>4. مقابر وادي الملوك:</strong> تشمل مقابر الملك رمسيس الثاني، الملكة حتشبسوت، وتوت عنخ آمون، تحتوي على نقوش ورسومات دقيقة تحكي الطقوس الدينية.</p>
+  </section>
+
+  <!-- هل تعلم -->
+  <section class="facts">
+    <h2>هل تعلم؟</h2>
+    <div class="fact-list">
+      <div class="fact">الأهرامات كانت مغطاة بطبقة من الحجر الجيري الأبيض اللامع لتعكس الشمس.</div>
+      <div class="fact">مقبرة توت عنخ آمون بقيت محفوظة تقريبًا 3300 سنة قبل اكتشافها.</div>
+      <div class="fact">المصريون القدماء كانوا يعتقدون أن المقبرة تحمي الروح وتساعد على البعث.</div>
+    </div>
+  </section>
+
+  <!-- الخاتمة -->
+  <section class="section" style="background-color:#f0e6c8;">
+    <h2>خلاصة</h2>
+    <p>المقابر المصرية القديمة تمثل تاريخًا طويلًا من الابتكار الهندسي والديني، من المصاطب البسيطة إلى الأهرامات العظيمة ومقابر وادي الملوك المحفورة بدقة. كل مقبرة هي رسالة للخلود، وتعلمنا كيف كان المصريون القدماء يدمجون الدين، الفن، والهندسة في بناء أماكن خالدة للذاكرة الأبدية.</p>
+  </section>
+
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+    <p>© 2025 - موقع مستقبلنا الذكي. فخورون بجذورنا العريقة 🇪🇬</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تراثنا المصري - مستقبلنا الذكي</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f7f3e9;
+      color: #3e2f1c;
+      overflow-x: hidden;
+    }
+
+    /* ===== الهيدر ===== */
+    header {
+      background-color: #b68d40;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 40px;
+      margin-left: 10px;
+      border: 2px solid white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== قسم المقدمة ===== */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9c/Giza_Pyramids.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero h1, .hero p, .hero button {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.3em;
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .hero button {
+      background-color: #ffd700;
+      color: #3e2f1c;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .hero button:hover {
+      background-color: #e0c000;
+    }
+
+    /* ===== قسم أنواع التراث ===== */
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      height: 100px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      color: #b68d40;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #5b4636;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background-color: #b68d40;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #9a772f;
+    }
+
+    /* ===== قسم الحفاظ على التراث ===== */
+    .preserve-card {
+      margin: 40px 20px;
+      background-color: #f0e0bb;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 40px 20px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .preserve-card:hover {
+      transform: scale(1.02);
+      background-color: #e8d3a1;
+    }
+
+    .preserve-card h2 {
+      color: #6d4b1f;
+      margin-bottom: 15px;
+    }
+
+    .preserve-card p {
+      color: #5b4636;
+      font-size: 1em;
+    }
+
+    /* ===== الفوتر ===== */
+    footer {
+      background-color: #3e2f1c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      position: relative;
+    }
+
+    footer img {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      height: 25px;
+    }
+
+    /* ===== توافق مع الجوال ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero {
+        padding: 50px 10px;
+      }
+
+      .hero h1 {
+        font-size: 1.8em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+
+      .sections {
+        padding: 20px 10px;
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .preserve-card {
+        margin: 20px 10px;
+        padding: 25px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+      <h2>مستقبلنا الذكي</h2>
+    </div>
+    <nav>
+      <a href="#">الرئيسية</a>
+      <a href="#">البيئة</a>
+      <a href="#">التكنولوجيا</a>
+      <a href="#">صحتنا</a>
+      <a href="تراث.html">تراثنا</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>تراثنا المصري.. قصة المجد والخلود</h1>
+    <p>منذ آلاف السنين، كتبت مصر أول فصول الحضارة الإنسانية.  
+    هنا نعيد اكتشاف تراثنا العظيم ونحافظ عليه لأجيال المستقبل.</p>
+    <button>استكشف أنواع التراث</button>
+  </section>
+
+  <section class="sections">
+    <div class="card">
+      <img src="pyramids.gif" alt="التراث الفرعوني">
+      <h3>التراث الفرعوني</h3>
+      <p>من الأهرامات إلى المعابد، حكاية ملوك مصر القدماء.</p>
+      <button onclick="location.href='تراث فرعوني.html'">اكتشف المزيد</button>
+    </div>
+
+    <div class="card">
+      <img src="rub-el-hizb.gif" alt="التراث الإسلامي">
+      <h3>التراث الإسلامي</h3>
+      <p>عمارة مملوكية ومساجد تزين قلب القاهرة بروح التاريخ.</p>
+      <button onclick="location.href='islamic.html'">اكتشف المزيد</button>
+    </div>
+
+    <div class="card">
+      <img src="christianity.gif" alt="التراث القبطي">
+      <h3>التراث القبطي</h3>
+      <p>كنائس وأيقونات تحافظ على الهوية الروحية لمصر.</p>
+      <button onclick="location.href='coptic.html'">اكتشف المزيد</button>
+    </div>
+
+    <div class="card">
+      <img src="teamwork.gif" alt="التراث الشعبي">
+      <h3>التراث الشعبي</h3>
+      <p>موسيقى وأكلات وملابس تحكي نبض الشارع المصري.</p>
+      <button onclick="location.href='folk.html'">اكتشف المزيد</button>
+    </div>
+  </section>
+
+  <!-- قسم الحفاظ على التراث -->
+  <section class="preserve-card" onclick="location.href='preserve.html'">
+    <h2>كيف نحافظ على تراثنا؟</h2>
+    <p>اكتشف كيف يمكننا جميعًا المساهمة في حماية تراث مصر العظيم باستخدام التكنولوجيا والتوعية والتعليم.</p>
+  </section>
+
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+    <p>© 2025 - موقع مستقبلنا الذكي. فخورون بجذورنا العريقة 🇪🇬</p>
+  </footer>
+
+</body>
+</html>

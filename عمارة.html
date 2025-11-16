@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العمارة والفنون المصرية القديمة - مستقبلنا الذكي</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f4e8;
+      color: #3e2f1c;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #b68d40;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 40px;
+      margin-left: 10px;
+      border: 2px solid white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Egyptian_pyramids_of_Giza.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      color: #ffd700;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 650px;
+      margin: 15px auto;
+    }
+
+    /* ===== Cards Section ===== */
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #b68d40;
+      margin-bottom: 25px;
+      font-size: 1.9em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #faf4de;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #b68d40;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #4b3820;
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background-color: #b68d40;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      font-size: 0.9em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #9a772f;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ===== هل تعلم ===== */
+    .facts {
+      background-color: #fff7d6;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .facts h2 {
+      color: #b68d40;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+
+    .fact-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .fact {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      font-size: 0.95em;
+      color: #3e2f1c;
+      transition: transform 0.3s;
+    }
+
+    .fact:hover {
+      transform: scale(1.03);
+      background-color: #f9f0c7;
+    }
+
+    /* ===== الخاتمة ===== */
+    .learn {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #efe3c0;
+    }
+
+    .learn h2 {
+      color: #6d4b1f;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .learn p {
+      color: #4b3820;
+      font-size: 1em;
+      max-width: 600px;
+      margin: 10px auto 20px;
+    }
+
+    .learn button {
+      background-color: #b68d40;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .learn button:hover {
+      background-color: #9a772f;
+    }
+
+    footer {
+      background-color: #3e2f1c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      position: relative;
+    }
+
+    footer img {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      height: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8em; }
+      .hero p { font-size: 1em; }
+      .cards, .fact-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+      <h2>مستقبلنا الذكي</h2>
+    </div>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="#">البيئة</a>
+      <a href="#">التكنولوجيا</a>
+      <a href="#">صحتنا</a>
+      <a href="تراث.html">تراثنا</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>العمارة والفنون المصرية القديمة</h1>
+    <p>تميزت العمارة المصرية القديمة بالدقة، الضخامة، والاستمرارية، فبقيت آلاف السنين شاهدة على عبقرية المصري القديم.</p>
+  </section>
+
+  <!-- أنواع المباني -->
+  <section class="section">
+    <h2>أنواع المباني الأساسية</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="ادفو ٢.webp" alt="المعابد">
+        <h3>المعابد</h3>
+        <p>دور ديني، تتكون من الفناء، القاعة، وقدس الأقداس. أمثلة: معبد الكرنك، معبد الأقصر.</p>
+        <button onclick="location.href='معابد.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="مقبرة.webp" alt="المقابر">
+        <h3>المقابر</h3>
+        <p>تعبر عن عقيدة البعث، أنواعها: مصاطب، أهرامات، مقابر وادي الملوك.</p>
+        <button onclick="location.href='مقابر.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="الاهرامات.webp" alt="الأهرامات">
+        <h3>الأهرامات</h3>
+        <p>أعجوبة هندسية: بناء هرم خوفو، نقل الحجارة، الدقة الرياضية.</p>
+        <button onclick="location.href='اهرامات.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="قصر طيبة.webp" alt="القصور">
+        <h3>القصور</h3>
+        <p>السكن الملكي، زخارف داخلية جميلة، أدوات الأثاث الملكية.</p>
+        <button onclick="location.href='قصور.html'">المزيد</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفنون المصرية القديمة -->
+  <section class="section" style="background-color:#f0e6c8;">
+    <h2>الفنون المصرية القديمة</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Great_Sphinx_of_Giza.jpg" alt="النحت">
+        <h3>النحت</h3>
+        <p>تماثيل الملوك والآلهة، مثال: أبو الهول. أسلوب الفن: هدوء، ثبات، كمالية.</p>
+        <button onclick="location.href='sculpture.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Tutankhamun_tomb_painting.jpg" alt="النقوش واللوحات">
+        <h3>النقش واللوحات الجدارية</h3>
+        <p>الرسومات داخل المعابد والمقابر، ألوان ثابتة، تحكي حياة المصري القديم.</p>
+        <button onclick="location.href='wallpaintings.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Karnak_Columns.jpg" alt="فن العمارة الزخرفي">
+        <h3>فن العمارة الزخرفي</h3>
+        <p>الأعمدة: بردية، لوتسية، نخيلية. الرموز: عنخ، الجعران، عين حورس.</p>
+        <button onclick="location.href='decorative.html'">المزيد</button>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Tutankhamun_mask.jpg" alt="التماثيل الصغيرة والتمائم">
+        <h3>التماثيل الصغيرة والتمائم</h3>
+        <p>تمائم مثل الجعران، وأقنعة مثل توت عنخ آمون.</p>
+        <button onclick="location.href='amulets.html'">المزيد</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- هل تعلم -->
+  <section class="facts">
+    <h2>هل تعلم؟</h2>
+    <div class="fact-list">
+      <div class="fact">الأهرامات كانت مغطاة بطبقة من الحجر الجيري الأبيض اللامع.</div>
+      <div class="fact">المصريون القدماء أول من استخدم الرسم المنظوري البسيط.</div>
+      <div class="fact">العمارة كانت تمثل رحلة الروح في الحياة الآخرة.</div>
+    </div>
+  </section>
+
+  <!-- الخاتمة -->
+  <section class="learn">
+    <h2>خلاصة</h2>
+    <p>العمارة المصرية القديمة ليست مجرد حجارة، بل علم وإيمان وفن. إنها مصدر إلهام للعمارة الحديثة.</p>
+    <button onclick="location.href='تراث.html'">عودة إلى صفحة التراث</button>
+  </section>
+
+  <footer>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="علم مصر">
+    <p>© 2025 - موقع مستقبلنا الذكي. فخورون بجذورنا العريقة 🇪🇬</p>
+  </footer>
+
+</body>
+</html>
